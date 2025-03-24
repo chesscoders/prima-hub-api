@@ -19,6 +19,13 @@ const schema = new Schema(
         validator: isEmail,
       },
     },
+    role: {
+      type: String,
+      enum: ['project-manager', 'site-manager'],
+    },
+    profilePicture: {
+      type: String,
+    },
     password: {
       type: String,
       required: true,

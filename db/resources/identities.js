@@ -3,31 +3,24 @@ import bcrypt from 'bcryptjs';
 export default async () => {
   return [
     {
-      email: 'michael@email.com',
-      name: 'Michael Scott',
-      role: 'admin',
-      __t: 'admin',
+      email: 'maria.constantin@primadevelopment.ro',
+      name: 'Maria Constantin',
+      role: 'project-manager',
+      __t: 'project-manager',
       password: bcrypt.hashSync('supersecretpassword'),
+      profilePicture: 'https://chesscoders.fra1.digitaloceanspaces.com/profile-placeholder.png',
       active: true,
       confirmed: true,
     },
     {
-      email: 'jim@email.com',
-      name: 'Jim Halpert',
-      role: 'client',
-      __t: 'admin',
+      email: 'cristian.lupu@primadevelopment.ro',
+      name: 'Cristian Lupu',
+      role: 'site-manager',
+      __t: 'site-manager',
       password: bcrypt.hashSync('supersecretpassword'),
-      active: false,
-      confirmed: true,
-    },
-    {
-      email: 'pam@email.com',
-      name: 'Pam Beesly',
-      role: 'client',
-      __t: 'admin',
-      password: bcrypt.hashSync('supersecretpassword'),
+      profilePicture: 'https://chesscoders.fra1.digitaloceanspaces.com/profile-placeholder2.png',
       active: true,
-      confirmed: false,
+      confirmed: true,
     },
   ];
 };
