@@ -5,6 +5,7 @@ import fileUpload from 'express-fileupload';
 import { connectToMongo, setupCors } from 'express-goodies';
 import helmet from 'helmet';
 import router from './router';
+import { whitelist } from 'site.config';
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(fileUpload());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // Custom cors config
-app.use(setupCors());
+app.use(setupCors(whitelist));
 
 // Route everything
 app.use(router);
