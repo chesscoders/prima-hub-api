@@ -1,7 +1,7 @@
 module.exports = {
   whitelist: [
     // Add whitelisted domains here
-    'https://hub-beta.chesscoders.com/',
+    'https://hub-beta.chesscoders.com',
   ],
   errorHandler: {
     ignoredErrors: [
