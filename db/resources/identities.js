@@ -22,5 +22,15 @@ export default async () => {
       active: true,
       confirmed: true,
     },
+    {
+      email: 'adrian.stoichina@primadevelopment.ro',
+      name: 'Adrian Stoichina',
+      role: 'admin',
+      __t: 'admin',
+      password: bcrypt.hashSync('supersecretpassword'),
+      profilePicture: 'https://chesscoders.fra1.digitaloceanspaces.com/profile-placeholder2.png',
+      active: true,
+      confirmed: true,
+    },
   ];
 };

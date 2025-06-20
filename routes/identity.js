@@ -1,7 +1,7 @@
 import { Identity } from '@controllers';
 import { loginSchema } from '@schemas';
 import { Router } from 'express';
-import { recaptcha, validate } from 'express-goodies/middleware';
+import { authenticate, recaptcha, validate } from 'express-goodies/middleware';
 
 const router = Router();
 export default router;
@@ -16,3 +16,13 @@ router.post('/refresh-token', Identity.refreshToken);
 
 router.post('/admin/change-password', Identity.changePassword);
 router.get('/admin/profile', Identity.profile);
+
+router.all('/users', authenticate);
+router.all('/users/*', authenticate);
+
+router.get('/users', Identity.listUsers);
+router.post('/users', Identity.createUser);
+router.get('/users/:id', Identity.readUser);
+router.put('/users/:id', Identity.updateUser);
+
+router.post('/users/upload-profile-picture', Identity.uploadProfilePicture);

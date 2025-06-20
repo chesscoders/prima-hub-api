@@ -21,7 +21,7 @@ const schema = new Schema(
     },
     role: {
       type: String,
-      enum: ['project-manager', 'site-manager'],
+      enum: ['project-manager', 'site-manager', 'admin'],
     },
     profilePicture: {
       type: String,
@@ -31,6 +31,9 @@ const schema = new Schema(
       required: true,
       minlength: 8,
       select: false,
+    },
+    permissions: {
+      type: [String],
     },
     loginAttempts: {
       type: Number,
