@@ -14,7 +14,11 @@ module.exports = async (req, res) => {
 
   const key = getS3FileName(removeDiacritics(document.name));
 
-  aws.upload(key, document.data);
+  const options = {
+    public: 'true',
+  };
+
+  aws.upload(key, document.data, options);
 
   const name = `${process.env.DO_SPACES_ENDPOINT}/${process.env.DO_SPACES_BUCKET}/${key}`;
 

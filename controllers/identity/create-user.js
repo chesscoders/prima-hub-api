@@ -3,7 +3,6 @@ import { Identity } from '@models';
 
 export default async (req, res) => {
   const { email } = req.body;
-  console.log('req.body: ', req.body);
 
   const userExists = await Identity.findOne({ email });
 
@@ -14,6 +13,7 @@ export default async (req, res) => {
   // Password is hashed automatically
   await Identity.create({
     ...req.body,
+    __t: req.body.role,
     active: true,
     confirmed: true,
   });
