@@ -1,8 +1,13 @@
 export { default as changePassword } from './change-password';
 export { default as confirm } from './confirm';
+export { default as createUser } from './create-user';
 export { default as forgot } from './forgot';
+export { default as listUsers } from './list-users';
 export { default as login } from './login';
 export { default as logout } from './logout';
 export { default as profile } from './profile';
+export { default as readUser } from './read-user';
 export { default as refreshToken } from './refresh-token';
 export { default as reset } from './reset';
+export { default as updateUser } from './update-user';
+export { default as uploadProfilePicture } from './upload-profile-picture';

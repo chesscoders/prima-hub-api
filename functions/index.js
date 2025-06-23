@@ -6,5 +6,7 @@ export { default as safeNumber } from 'express-goodies/functions/safe-number';
 export { default as safeString } from 'express-goodies/functions/safe-string';
 
 // Export the functions
+export { default as getS3FileName } from './get-s3-file-name';
 export { default as randomHash } from './random-hash';
+export { default as removeDiacritics } from './remove-diacritics';
 export { default as removeRefreshTokenCookie } from './remove-refresh-token-cookie';
