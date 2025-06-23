@@ -10,6 +10,14 @@ export default async (req, res) => {
     throw error(400, 'Eroare! Această adresă de email este deja înregistrată');
   }
 
+  if (typeof req.body.profilePicture !== 'string') {
+    req.body.profilePicture = null;
+  }
+
+  if (req.body.password !== req.body.confirmPassword) {
+    throw error(400, 'Eroare! Parolele nu coincid');
+  }
+
   // Password is hashed automatically
   await Identity.create({
     ...req.body,
