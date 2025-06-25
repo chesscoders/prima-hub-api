@@ -21,7 +21,9 @@ const schema = new Schema(
     },
     role: {
       type: String,
-      enum: ['project-manager', 'site-manager', 'admin'],
+    },
+    companyRole: {
+      type: String,
     },
     profilePicture: {
       type: String,
