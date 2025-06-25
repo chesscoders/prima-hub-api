@@ -32,6 +32,7 @@ export default async (req, res) => {
     password: passwordFromDb,
     profilePicture,
     permissions,
+    companyRole,
   } = identity;
   if (!active || !confirmed) {
     throw error(400, 'Your account is not active');
@@ -46,8 +47,7 @@ export default async (req, res) => {
   }
 
   // The JWT public data payload
-  const payload = { name, email, role, profilePicture, me: id, permissions };
-
+  const payload = { name, email, role, profilePicture, me: id, permissions, companyRole };
   const token = jwt.sign(payload, process.env.JWT_SECRET, {
     expiresIn: '15m',
     algorithm: 'HS256',
