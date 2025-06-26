@@ -4,8 +4,8 @@ module.exports = (query) => {
   // Exclude admin users
   filter.role = { $ne: 'admin' };
 
-  if (query?.role && query.role !== 'all') {
-    filter.role = query.role;
+  if (query?.companyRole?.length >= 3) {
+    filter.companyRole = { $regex: query.companyRole, $options: 'i' };
   }
 
   // Minimum 3 characters for searching by name
