@@ -16,6 +16,10 @@ export default async (req, res) => {
     throw error(400, 'Eroare! Parolele nu coincid');
   }
 
+  if (changePassword.length < 8) {
+    throw error(400, 'Eroare! Parola trebuie să aibă cel puțin 8 caractere');
+  }
+
   const document = await Identity.findById(req.user.me).select('password');
   if (!document) {
     throw error(500, 'Eroare! Contul nu a fost găsit');
