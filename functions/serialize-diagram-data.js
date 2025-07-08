@@ -1,24 +1,40 @@
+// db/serializers/diagram.js  (CommonJS, adjust path to taste)
 const stripTags = (s = '') =>
   s
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
-/* ---------- nodes ---------------------------------------------------- */
-function node(doc) {
+/* ------------------------------------------------------------------ *
+ * shared edge styling – same values you used on the client           *
+ * ------------------------------------------------------------------ */
+const defaultEdgeStyle = { stroke: '#374151', strokeWidth: 1.3 };
+const defaultMarker = { type: 'arrow', color: '#374151', width: 13, height: 13 };
+
+/* ------------------------------------------------------------------ *
+ * node helper                                                        *
+ * ------------------------------------------------------------------ */
+function serialiseNode(doc, flowSlug) {
+  const isPrimary = (doc.cssClass || '').includes('primary'); // legacy rule
   return {
     id: doc.legacyId,
-    position: doc.position,
-    data: { label: stripTags(doc.label) },
+    type: 'flow', // handled by <FlowNode>
+    position: doc.position || { x: 0, y: 0 }, // safety default
     className: doc.cssClass || '',
-    link: doc.link || null,
+
+    data: {
+      label: stripTags(doc.label), // keep text only
+      href: isPrimary ? `/flow/${flowSlug}` : null,
+      cssClass: `flow-node ${doc.cssClass || ''}`,
+    },
   };
 }
 
-/* ---------- edges ---------------------------------------------------- */
-function edge(doc) {
-  // `populate('source', 'legacyId')` makes .source an object with legacyId
-  const src = doc.source.legacyId || doc.source;
+/* ------------------------------------------------------------------ *
+ * edge helper                                                        *
+ * ------------------------------------------------------------------ */
+function serialiseEdge(doc) {
+  const src = doc.source.legacyId || doc.source; // populated or raw
   const trg = doc.target.legacyId || doc.target;
 
   return {
@@ -28,21 +44,25 @@ function edge(doc) {
     sourceHandle: doc.sourceHandle || undefined,
     targetHandle: doc.targetHandle || undefined,
     type: doc.edgeType || 'straight',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
   };
 }
 
-/* ---------- entire flow payload ------------------------------------- */
-function serializeDiagramData(flowDoc, nodes = [], edges = [], tabs = []) {
+/* ------------------------------------------------------------------ *
+ * main export – creates the payload sent to the client               *
+ * ------------------------------------------------------------------ */
+function serialiseDiagramData(flowDoc, nodes = [], edges = [], tabs = []) {
   return {
     id: flowDoc._id,
     slug: flowDoc.slug,
     title: flowDoc.title,
-    permission: flowDoc.permission ?? null, // ← keep ACL handy
+    permission: flowDoc.permission ?? null,
     isPrimary: !!flowDoc.isPrimary,
-    nodes: nodes.map(node),
-    edges: edges.map(edge),
-    tabs, // tabs already plain JSON (see step 4)
+
+    nodes: nodes.map((n) => serialiseNode(n, flowDoc.slug)),
+    edges: edges.map(serialiseEdge),
+    tabs, // already lean plain JSON
   };
 }
-
-export default serializeDiagramData;
+export default serialiseDiagramData;
