@@ -11,6 +11,7 @@ export default async (req, res) => {
 
   // Find the user by case-insensitive email search
   // The email should already be lowercase if loginSchema middleware was used
+
   const identity = await Identity.findOne({ email }).select('+password');
   if (!identity) {
     throw error(400, 'Your email or password are invalid');

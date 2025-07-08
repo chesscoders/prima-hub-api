@@ -1,4 +1,3 @@
-import * as exampleRoutes from '@examples/routes';
 import * as routes from '@routes';
 import { Router } from 'express';
 import middleware from 'express-goodies/middleware';
@@ -25,7 +24,7 @@ router.use(middleware.testLoading);
 router.use(routes.download);
 router.use(routes.identity);
 router.use(routes.logger);
-router.use(exampleRoutes.todo);
+router.use(routes.flow);
 
 // Matches any other HTTP method and route not matched before
 router.all('*', middleware.notFound);

@@ -8,7 +8,7 @@ export default router;
 
 router.post('/confirm/:hash', recaptcha, Identity.confirm);
 router.post('/forgot', recaptcha, Identity.forgot);
-router.post('/login', recaptcha, validate(loginSchema), Identity.login);
+router.post('/login', validate(loginSchema), Identity.login);
 router.post('/reset/:hash', recaptcha, Identity.reset);
 
 router.post('/logout', Identity.logout);
