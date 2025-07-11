@@ -31,7 +31,7 @@ const getNodes = () => [
   {
     id: '3',
     label: 'Proiectarea DTAC',
-    link: '/flow/proiectare-dtac',
+    link: '/flow/proiectare',
     position: { x: 326.05, y: 65 },
     cssClass: defaultCss,
     sourceHandles: ['top'],
@@ -47,7 +47,7 @@ const getNodes = () => [
   {
     id: 'ptdde',
     label: 'Proiectarea PT+DDE',
-    link: '/flow/proiectare-pt-dde',
+    //link: '/flow/proiectare-pt-dde',
     position: { x: 652.1, y: 65 },
     cssClass: defaultCss,
     sourceHandles: ['top'],
