@@ -68,6 +68,7 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
         cssClass: n.cssClass ?? n.className ?? '',
         link: n.link ?? n.url ?? null,
         permission: n.permission ?? flowPerm ?? null,
+        showIndex: n?.showIndex ?? false,
       }))
     );
     nodeDocs.forEach((d) => idMap.set(d.legacyId, d._id));

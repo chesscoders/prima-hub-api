@@ -35,6 +35,7 @@ const addEdge = ({
   style,
   markerEnd,
   permission,
+  showIndex: true,
 });
 
 /* =================================================================
@@ -48,6 +49,7 @@ const getNodes = () => [
     position: { x: 20, y: 50 },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '2',
@@ -56,6 +58,7 @@ const getNodes = () => [
     position: { x: 260, y: 50 },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '3',
@@ -64,6 +67,7 @@ const getNodes = () => [
     position: { x: 522.6, y: 50 },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '4',
@@ -72,6 +76,7 @@ const getNodes = () => [
     position: { x: 882.4, y: 50 },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '5',
@@ -80,6 +85,7 @@ const getNodes = () => [
     position: { x: 1242, y: 50 },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -101,6 +107,7 @@ const getMiniNodes = () => [
     position: { x: 10, y: 20 },
     cssClass: 'mini-flow primary w-48 h-[35px]',
     permission,
+    showIndex: true,
   },
   {
     id: 'concept',
@@ -109,6 +116,7 @@ const getMiniNodes = () => [
     position: { x: 230, y: 20 },
     cssClass: 'mini-flow primary w-56 h-[35px]',
     permission,
+    showIndex: true,
   },
   {
     id: 'urbanisticaa',
@@ -117,6 +125,7 @@ const getMiniNodes = () => [
     position: { x: 100, y: 70 },
     cssClass: 'mini-flow green w-56 h-[35px]',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -150,6 +159,7 @@ const getMiniEdges = () => [
 /* ------------------------------------------------------------------ */
 module.exports = {
   permission,
+  showIndex: true,
   // full flow
   getNodes,
   getEdges,

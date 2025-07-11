@@ -34,6 +34,7 @@ function addEdge({
     style,
     markerEnd,
     permission,
+    showIndex: true,
   };
 }
 
@@ -47,6 +48,7 @@ const getNodes = () => [
     position: { x: 247, y: 25 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '2',
@@ -54,6 +56,7 @@ const getNodes = () => [
     position: { x: 185, y: 80 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '3',
@@ -61,6 +64,7 @@ const getNodes = () => [
     position: { x: 249, y: 135 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '4',
@@ -68,6 +72,7 @@ const getNodes = () => [
     position: { x: 640, y: 25 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '5',
@@ -75,6 +80,7 @@ const getNodes = () => [
     position: { x: 875, y: 25 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '6',
@@ -82,6 +88,7 @@ const getNodes = () => [
     position: { x: 614, y: 200 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '7',
@@ -89,6 +96,7 @@ const getNodes = () => [
     position: { x: 195, y: 265 },
     cssClass: 'receptie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '8',
@@ -96,6 +104,7 @@ const getNodes = () => [
     position: { x: 360, y: 330 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '9',
@@ -103,6 +112,7 @@ const getNodes = () => [
     position: { x: 623, y: 330 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '10',
@@ -110,6 +120,7 @@ const getNodes = () => [
     position: { x: 845, y: 330 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '11',
@@ -117,6 +128,7 @@ const getNodes = () => [
     position: { x: 510, y: 395 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '12',
@@ -124,6 +136,7 @@ const getNodes = () => [
     position: { x: 185, y: 460 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '13',
@@ -131,6 +144,7 @@ const getNodes = () => [
     position: { x: 735, y: 460 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '14',
@@ -138,6 +152,7 @@ const getNodes = () => [
     position: { x: 456.7, y: 515 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '15',
@@ -145,6 +160,7 @@ const getNodes = () => [
     position: { x: 775, y: 515 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '16',
@@ -152,6 +168,7 @@ const getNodes = () => [
     position: { x: 1005, y: 515 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '17',
@@ -159,6 +176,7 @@ const getNodes = () => [
     position: { x: 956.7, y: 570 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '18',
@@ -166,6 +184,7 @@ const getNodes = () => [
     position: { x: 625, y: 635 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '19',
@@ -173,6 +192,7 @@ const getNodes = () => [
     position: { x: 932.4, y: 635 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '20',
@@ -180,6 +200,7 @@ const getNodes = () => [
     position: { x: 940.5, y: 690 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '21',
@@ -187,6 +208,7 @@ const getNodes = () => [
     position: { x: 491.4, y: 745 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '22',
@@ -194,6 +216,7 @@ const getNodes = () => [
     position: { x: 741, y: 745 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '23',
@@ -201,6 +224,7 @@ const getNodes = () => [
     position: { x: 970, y: 745 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '24',
@@ -208,6 +232,7 @@ const getNodes = () => [
     position: { x: 920.6, y: 800 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '25',
@@ -215,6 +240,7 @@ const getNodes = () => [
     position: { x: 1026.2, y: 855 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '26',
@@ -222,6 +248,7 @@ const getNodes = () => [
     position: { x: 676, y: 855 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '27',
@@ -229,6 +256,7 @@ const getNodes = () => [
     position: { x: 226, y: 855 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '28',
@@ -236,6 +264,7 @@ const getNodes = () => [
     position: { x: 503, y: 920 },
     cssClass: 'intabulare-flow',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -346,6 +375,7 @@ const getMiniNodes = () => [
     position: { x: 10, y: 70 },
     cssClass: 'mini-flow primary w-[135px]',
     permission,
+    showIndex: true,
   },
   {
     id: '7',
@@ -353,6 +383,7 @@ const getMiniNodes = () => [
     position: { x: 180, y: 70 },
     cssClass: 'mini-flow primary w-52',
     permission,
+    showIndex: true,
   },
   {
     id: '8',
@@ -360,6 +391,7 @@ const getMiniNodes = () => [
     position: { x: 635, y: 70 },
     cssClass: 'mini-flow primary w-44',
     permission,
+    showIndex: true,
   },
   {
     id: 'c',
@@ -367,6 +399,7 @@ const getMiniNodes = () => [
     position: { x: 310, y: 10 },
     cssClass: 'mini-flow green w-60',
     permission,
+    showIndex: true,
   },
   {
     id: 'utilitati',
@@ -374,6 +407,7 @@ const getMiniNodes = () => [
     position: { x: 10, y: 130 },
     cssClass: 'mini-flow orange w-max',
     permission,
+    showIndex: true,
   },
   {
     id: 'intabulare',
@@ -381,6 +415,7 @@ const getMiniNodes = () => [
     position: { x: 310, y: 130 },
     cssClass: 'mini-flow primary w-64',
     permission,
+    showIndex: true,
   },
   {
     id: 'cvc',
@@ -388,6 +423,7 @@ const getMiniNodes = () => [
     position: { x: 595, y: 130 },
     cssClass: 'mini-flow primary w-64',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -443,6 +479,7 @@ const getMiniEdges = () => [
 /* ------------------------------------------------------------------ */
 module.exports = {
   permission,
+  showIndex: true,
   // full diagram
   getNodes,
   getEdges,

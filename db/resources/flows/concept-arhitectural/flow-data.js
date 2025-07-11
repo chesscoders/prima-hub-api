@@ -22,6 +22,7 @@ const addEdge = ({
   style,
   markerEnd,
   permission,
+  showIndex: true,
 });
 
 /* =================================================================
@@ -43,6 +44,7 @@ const getNodes = () => [
     data: { label: 'Inițierea concursului' },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '2',
@@ -50,6 +52,7 @@ const getNodes = () => [
     data: { label: 'Redactarea temei de concurs' },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '3',
@@ -57,6 +60,7 @@ const getNodes = () => [
     data: { label: 'Participarea arhitecților și predarea conceptelor' },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '4',
@@ -64,6 +68,7 @@ const getNodes = () => [
     data: { label: 'Votarea propunerilor' },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
   {
     id: '5',
@@ -71,6 +76,7 @@ const getNodes = () => [
     data: { label: 'Anunțarea câștigătorului' },
     cssClass: 'achizitie-flow',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -92,6 +98,7 @@ const getMiniNodes = () => [
     position: { x: 10, y: 20 },
     cssClass: 'mini-flow primary w-40 h-[35px]',
     permission,
+    showIndex: true,
   },
   {
     id: 'concept',
@@ -100,6 +107,7 @@ const getMiniNodes = () => [
     position: { x: 200, y: 20 },
     cssClass: 'mini-flow primary w-[210px] h-[35px]',
     permission,
+    showIndex: true,
   },
   {
     id: 'urbanisticaa',
@@ -108,6 +116,7 @@ const getMiniNodes = () => [
     position: { x: 74, y: 70 },
     cssClass: 'mini-flow green w-52 h-[35px]',
     permission,
+    showIndex: true,
   },
   {
     id: 'dtac',
@@ -116,6 +125,7 @@ const getMiniNodes = () => [
     position: { x: 439, y: 20 },
     cssClass: 'mini-flow primary w-40 h-[35px]',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -162,6 +172,7 @@ const getMiniEdges = () => [
 /* ------------------------------------------------------------------ */
 module.exports = {
   permission,
+  showIndex: true,
   // full flow
   getNodes,
   getEdges,

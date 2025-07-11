@@ -114,6 +114,7 @@ const getMiniNodes = () => [
     position: { x: 10, y: 15 },
     cssClass: 'mini-flow primary w-52',
     permission,
+    showIndex: true,
   },
   {
     id: '2',
@@ -122,6 +123,7 @@ const getMiniNodes = () => [
     position: { x: 250, y: 15 },
     cssClass: 'mini-flow primary w-44',
     permission,
+    showIndex: true,
   },
   {
     id: '3',
@@ -130,6 +132,7 @@ const getMiniNodes = () => [
     position: { x: 458, y: 15 },
     cssClass: 'mini-flow green w-52',
     permission,
+    showIndex: true,
   },
   {
     id: '4',
@@ -138,6 +141,7 @@ const getMiniNodes = () => [
     position: { x: 210, y: 80 },
     cssClass: 'mini-flow primary w-64',
     permission,
+    showIndex: true,
   },
 ];
 
@@ -156,6 +160,7 @@ const getMiniEdges = () => [
     style: defaultEdgeStyle,
     markerEnd: defaultMarker,
     permission,
+    showIndex: true,
   },
   {
     id: '2-3',
@@ -167,6 +172,7 @@ const getMiniEdges = () => [
     style: defaultEdgeStyle,
     markerEnd: defaultMarker,
     permission,
+    showIndex: true,
   },
   {
     id: '2-4',
@@ -178,6 +184,7 @@ const getMiniEdges = () => [
     style: defaultEdgeStyle,
     markerEnd: defaultMarker,
     permission,
+    showIndex: true,
   },
 ];
 module.exports = { getNodes, getEdges, getMiniEdges, getMiniNodes, permission: '8' };

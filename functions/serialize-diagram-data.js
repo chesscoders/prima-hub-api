@@ -58,6 +58,7 @@ function serialiseNode(doc, flowSlug, handleMap) {
         source: toArr(handles.source),
         target: toArr(handles.target),
       },
+      showIndex: doc.showIndex,
     },
   };
 }

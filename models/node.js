@@ -41,7 +41,9 @@ const schema = new Schema(
       type: String,
       default: '',
     },
-
+    showIndex: {
+      type: Boolean,
+    },
     /* Where the node should navigate – leave null if not applicable */
     link: {
       type: String,

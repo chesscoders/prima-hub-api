@@ -1808,6 +1808,7 @@ function getMiniNodes() {
       position: { x: 10, y: 70 },
       cssClass: 'mini-flow primary w-52',
       permission,
+      showIndex: true,
     },
     {
       id: '7',
@@ -1816,6 +1817,7 @@ function getMiniNodes() {
       position: { x: 240, y: 70 },
       cssClass: 'mini-flow primary w-40',
       permission,
+      showIndex: true,
     },
     {
       id: '8',
@@ -1824,6 +1826,7 @@ function getMiniNodes() {
       position: { x: 424, y: 70 },
       cssClass: 'mini-flow primary w-40',
       permission,
+      showIndex: true,
     },
     {
       id: 'c',
@@ -1832,6 +1835,7 @@ function getMiniNodes() {
       position: { x: 345, y: 10 },
       cssClass: 'mini-flow green w-40',
       permission,
+      showIndex: true,
     },
   ];
 }
@@ -1849,6 +1853,7 @@ function getMiniEdges() {
       style: { stroke: '#000' },
       markerEnd: { type: 'arrowclosed', color: '#000' },
       permission,
+      showIndex: true,
     },
     {
       id: '7-8',
@@ -1860,6 +1865,7 @@ function getMiniEdges() {
       style: { stroke: '#000' },
       markerEnd: { type: 'arrowclosed', color: '#000' },
       permission,
+      showIndex: true,
     },
     {
       id: '7-c',
@@ -1871,6 +1877,7 @@ function getMiniEdges() {
       style: { stroke: '#000' },
       markerEnd: { type: 'arrowclosed', color: '#000' },
       permission,
+      showIndex: true,
     },
   ];
 }
