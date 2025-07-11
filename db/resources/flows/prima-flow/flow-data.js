@@ -1,30 +1,31 @@
-// resources/flows/prima-flow/raw-data.js
-// --------------------------------------
-// Plain data only.  Two named exports:
-//
-//   • nodes – every node with label, link, position, cssClass
-//   • edges – every edge with source/target/handles/type
-//
-// You may add extra fields (permission, color, etc.) later without
-// touching the client builder.
+/* resources/flows/prima-flow/flow-data.js
+   ---------------------------------------------------------
+   JSON-ready data for the landing page “PRIMA Flow”.        */
 
+const defaultCss = 'flow primary w-[138.4px]';
+const greenCss = 'flow green';
+const violetCss = 'flow violet';
+const yellowCss = 'flow yellow';
+const pinkCss = 'flow pink';
+const widePrimary = 'flow primary w-[280px]';
+
+/* ---- NODES ---------------------------------------------------------- */
 const getNodes = () => [
+  /* main line ------------------------------------------------------- */
   {
     id: 'achizitie',
     label: 'Achiziția Terenului',
     link: '/flow/achizitie-teren',
     position: { x: 0, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['bottom'],
-    targetHandles: [],
   },
   {
     id: 'concept',
     label: 'Conceptul Arhitectural',
     link: '/flow/concept-arhitectural',
     position: { x: 163.01, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
-    sourceHandles: [],
+    cssClass: defaultCss,
     targetHandles: ['bottom'],
   },
   {
@@ -32,52 +33,38 @@ const getNodes = () => [
     label: 'Proiectarea DTAC',
     link: '/flow/proiectare-dtac',
     position: { x: 326.05, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['top'],
-    targetHandles: [],
   },
   {
     id: 'autorizarea',
     label: 'Autorizarea',
     link: null,
     position: { x: 489.08, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['bottom'],
-    targetHandles: [],
   },
   {
     id: 'ptdde',
     label: 'Proiectarea PT+DDE',
     link: '/flow/proiectare-pt-dde',
     position: { x: 652.1, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['top'],
-    targetHandles: [],
-  },
-  {
-    id: 'reautorizare',
-    label: 'Reautorizarea în timpul execuției',
-    link: '/flow/proiectare-pt-dde',
-    position: { x: 745, y: 0 },
-    cssClass: 'flow green w-40',
-    sourceHandles: [],
-    targetHandles: [],
   },
   {
     id: 'constructia',
     label: 'Construcția',
     link: null,
     position: { x: 815.12, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
-    sourceHandles: [],
-    targetHandles: [],
+    cssClass: defaultCss,
   },
   {
     id: 'receptie',
     label: 'Recepția cu autoritățile',
     link: '/flow/intabulare',
     position: { x: 978.14, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['top', 'bottom'],
     targetHandles: ['custom-bottom'],
   },
@@ -86,80 +73,76 @@ const getNodes = () => [
     label: 'Recepția cu clienții',
     link: '/flow/receptie-clienti',
     position: { x: 1141.15, y: 65 },
-    cssClass: 'flow primary w-[138.4px]',
+    cssClass: defaultCss,
     sourceHandles: ['bottom'],
-    targetHandles: [],
   },
   {
     id: 'remedieri',
     label: 'Remedierile în garanție',
     link: '/flow/remedieri-garantie',
     position: { x: 1304.3, y: 65 },
-    cssClass: 'flow green w-[138.4px]',
-    sourceHandles: [],
+    cssClass: `${greenCss} w-[138.4px]`,
     targetHandles: ['bottom'],
   },
 
-  // ----- secondary rows ------------------------------------------------
+  /* secondary rows -------------------------------------------------- */
   {
     id: 'urbanisticaa',
     label: 'Autorizarea Urbanistică',
     link: null,
-    position: { x: 70, y: 140 },
-    cssClass: 'flow green w-36',
+    position: { x: 70, y: 240 },
+    cssClass: `${greenCss} w-36`,
   },
   {
     id: 'finantare',
     label: 'Finanțare bancă',
     link: null,
     position: { x: 417, y: 0 },
-    cssClass: 'flow green w-44 h-11',
+    cssClass: `${greenCss} w-44 h-11`,
   },
   {
     id: 'c',
     label: 'Autorizarea SSI și AP. CIV',
     link: null,
     position: { x: 1070, y: 0 },
-    cssClass: 'flow green w-56 h-11',
+    cssClass: `${greenCss} w-56 h-11`,
   },
   {
     id: 'utilitati',
-    label: 'BRANȘAMENTE LA UTILITĂȚI',
+    label: 'Branșamente la utilități',
     link: null,
     position: { x: 580, y: 140 },
-    cssClass: 'flow pink w-40',
+    cssClass: `${pinkCss}  w-40`,
   },
-
   {
     id: 'setup',
     label: 'Setarea procesului de vânzări',
     link: null,
     position: { x: 580, y: 215 },
-    cssClass: 'flow violet w-40',
+    cssClass: `${violetCss} w-40`,
   },
   {
     id: 'vanzari',
     label: 'Gestionarea vânzărilor',
     link: null,
     position: { x: 763, y: 215 },
-    cssClass: 'flow violet w-32',
+    cssClass: `${violetCss} w-32`,
     sourceHandles: ['bottom'],
   },
   {
     id: 'pregatire-cvc',
-    label: 'Pregătirea semnării contractelor CVC',
+    label: 'Pregătirea semnării CVC',
     link: null,
     position: { x: 914, y: 215 },
-    cssClass: 'flow violet w-44',
+    cssClass: `${violetCss} w-44`,
     sourceHandles: ['bottom'],
   },
-
   {
     id: 'setupmrk',
     label: 'Setup-ul Marketingului',
     link: null,
     position: { x: 580, y: 290 },
-    cssClass: 'flow yellow w-40',
+    cssClass: `${yellowCss} w-40`,
     sourceHandles: ['bottom'],
   },
   {
@@ -167,22 +150,21 @@ const getNodes = () => [
     label: 'Gestionarea Marketingului',
     link: null,
     position: { x: 690, y: 365 },
-    cssClass: 'flow yellow w-40',
+    cssClass: `${yellowCss} w-40`,
   },
   {
     id: 'customer',
     label: 'Interacțiunea cu clientul',
     link: null,
     position: { x: 690, y: 440 },
-    cssClass: 'flow yellow w-40',
+    cssClass: `${yellowCss} w-40`,
   },
-
   {
     id: 'cvc',
     label: 'Semnarea contractelor CVC',
     link: null,
     position: { x: 1134.8, y: 215 },
-    cssClass: 'flow primary w-44',
+    cssClass: `${defaultCss.replace('w-[138.4px]', 'w-44')}`,
     sourceHandles: ['bottom'],
     targetHandles: ['left', 'top', 'custom-left'],
   },
@@ -191,7 +173,7 @@ const getNodes = () => [
     label: 'Intabularea Apartamentelor',
     link: '/flow/intabulare',
     position: { x: 1034, y: 140 },
-    cssClass: 'flow primary w-36',
+    cssClass: `${defaultCss.replace('w-[138.4px]', 'w-36')}`,
     sourceHandles: ['bottom'],
   },
   {
@@ -199,15 +181,14 @@ const getNodes = () => [
     label: 'Comunicare cu clienții',
     link: null,
     position: { x: 850, y: 290 },
-    cssClass: 'flow violet w-40',
+    cssClass: `${violetCss} w-40`,
   },
-
   {
     id: 'asociatie',
-    label: 'Înființarea Asociației de Proprietari',
+    label: 'Înființarea Asociației',
     link: null,
     position: { x: 1082.8, y: 365 },
-    cssClass: 'flow primary w-[280px]',
+    cssClass: widePrimary,
     sourceHandles: ['bottom'],
     targetHandles: ['top'],
   },
@@ -216,13 +197,21 @@ const getNodes = () => [
     label: 'Predarea clădirii către clienți',
     link: null,
     position: { x: 1135, y: 440 },
-    cssClass: 'flow primary w-44',
+    cssClass: `${defaultCss.replace('w-[138.4px]', 'w-44')}`,
     targetHandles: ['top'],
+  },
+  {
+    id: 'reautorizare',
+    label: 'Reautorizarea în execuție',
+    link: '/flow/proiectare-pt-dde',
+    position: { x: 745, y: 0 },
+    cssClass: `${greenCss} w-40`,
   },
 ];
 
+/* ---- EDGES ---------------------------------------------------------- */
 const getEdges = () => [
-  // main line
+  /* main line (7 segments) */
   {
     id: 'achizitie-concept',
     source: 'achizitie',
@@ -279,6 +268,8 @@ const getEdges = () => [
     targetHandle: 'left',
     type: 'straight',
   },
+
+  /* end-cap */
   {
     id: '8-remedieri',
     source: '8',
@@ -288,29 +279,13 @@ const getEdges = () => [
     type: 'step',
   },
 
-  // secondary connections
+  /* secondary links (23) */
   {
     id: 'achizitie-urbanisticaa',
     source: 'achizitie',
     target: 'urbanisticaa',
     sourceHandle: 'bottom',
     targetHandle: 'left',
-    type: 'step',
-  },
-  {
-    id: 'ptdde-reautorizare',
-    source: 'ptdde',
-    target: 'reautorizare',
-    sourceHandle: 'top',
-    targetHandle: 'left',
-    type: 'step',
-  },
-  {
-    id: 'reautorizare-constructie',
-    source: 'reautorizare',
-    target: 'constructia',
-    sourceHandle: 'right',
-    targetHandle: 'top',
     type: 'step',
   },
   {
@@ -329,6 +304,14 @@ const getEdges = () => [
     targetHandle: 'left',
     type: 'step',
   },
+  {
+    id: 'ptdde-reautorizare',
+    source: 'ptdde',
+    target: 'reautorizare',
+    sourceHandle: 'top',
+    targetHandle: 'left',
+    type: 'step',
+  },
 
   {
     id: 'autorizarea-utilitati',
@@ -339,12 +322,13 @@ const getEdges = () => [
     type: 'step',
   },
   {
-    id: 'utilitati-7',
+    id: 'utilitati-receptie',
     source: 'utilitati',
     target: 'receptie',
     sourceHandle: 'right',
     targetHandle: 'custom-bottom',
     type: 'step',
+    targetHandleCss: 'bottom-24',
   },
 
   {
@@ -398,7 +382,7 @@ const getEdges = () => [
   },
 
   {
-    id: '7-c',
+    id: 'receptie-c',
     source: 'receptie',
     target: 'c',
     sourceHandle: 'top',
@@ -406,7 +390,7 @@ const getEdges = () => [
     type: 'step',
   },
   {
-    id: '7-intabulare',
+    id: 'receptie-intabulare',
     source: 'receptie',
     target: 'intabulare',
     sourceHandle: 'bottom',
@@ -470,6 +454,9 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'bottom',
     type: 'step',
-  },
+    targetHandleCss: 'left-24',
+  }, // small offset like in legacy JSX
 ];
+
+/* -------------------------------------------------------------------- */
 module.exports = { getNodes, getEdges };

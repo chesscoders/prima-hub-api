@@ -28,6 +28,10 @@ const schema = new Schema(
     /* optional handle IDs from the old diagram */
     sourceHandle: { type: String, default: null },
     targetHandle: { type: String, default: null },
+    targetHandleCss: {
+      type: String,
+    },
+    sourceHandleCss: { type: String },
 
     /* straight / step / short-step / … */
     edgeType: { type: String, default: 'straight', trim: true },

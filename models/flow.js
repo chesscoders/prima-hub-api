@@ -2,7 +2,34 @@ const { paginate, validate } = require('express-goodies/mongoose');
 const { Schema, model } = require('mongoose');
 
 const name = 'flow';
+const MiniNode = new Schema(
+  {
+    id: { type: String },
+    label: { type: String },
+    link: { type: String },
+    cssClass: { type: String },
+    position: {
+      x: Number,
+      y: Number,
+    },
+  },
+  { _id: false }
+);
 
+const MiniEdge = new Schema(
+  {
+    source: { type: String },
+    target: { type: String },
+    sourceHandle: { type: String },
+    targetHandle: { type: String },
+    edgeType: { type: String },
+    targetHandleCss: {
+      type: String,
+    },
+    sourceHandleCss: { type: String },
+  },
+  { _id: false }
+);
 const schema = new Schema(
   {
     /* e.g. "achizitie-teren" */
@@ -31,6 +58,10 @@ const schema = new Schema(
     permission: {
       type: String,
       default: null,
+    },
+    miniMap: {
+      nodes: [MiniNode],
+      edges: [MiniEdge],
     },
   },
   { timestamps: true, autoCreate: false }

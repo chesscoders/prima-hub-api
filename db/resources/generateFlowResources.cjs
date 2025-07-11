@@ -32,15 +32,29 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
   for (const slug of flowDirs) {
     /* ---------- FLOW ------------------------------------------------ */
     const modPath = path.join(ROOT, slug, 'flow-data.js');
-    const { getNodes, getEdges, permission: flowPerm, title, isPrimary } = require(modPath);
-    console.log(flowPerm);
+    const isPrimary = slug == 'prima-flow' ? true : false;
+    const {
+      getNodes,
+      getEdges,
+      getMiniEdges,
+      getMiniNodes,
+      permission: flowPerm,
+      title,
+    } = require(modPath);
+
+    /* fallback to empty arrays when helpers are missing */
+    const miniNodes = typeof getMiniNodes === 'function' ? getMiniNodes() : [];
+    const miniEdges = typeof getMiniEdges === 'function' ? getMiniEdges() : [];
+
     const flowDoc = await Flow.create({
       slug,
       title: title ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
-      isPrimary: !!isPrimary,
-      permission: flowPerm ?? null, // <-- stored on Flow now
-    });
+      isPrimary,
+      permission: flowPerm ?? null,
 
+      /* always store the field, even if empty */
+      miniMap: { nodes: miniNodes, edges: miniEdges },
+    });
     /* ---------- NODES ---------------------------------------------- */
     const legacyNodes = await getNodes();
     const idMap = new Map(); // legacyId ➜ Mongo _id

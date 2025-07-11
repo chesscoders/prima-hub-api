@@ -1879,4 +1879,63 @@ const getEdges = () => [
     markerEnd: { type: 'arrowclosed', color: '#000' },
   },
 ];
-module.exports = { getNodes, getEdges, permission: 'remedieri' };
+const permission = 'remedieri';
+
+/* ---------- nodes -------------------------------------------------- */
+const getMiniNodes = () => [
+  {
+    id: '1',
+    label: 'Recepția cu clienții',
+    link: '/flow/receptie-clienti',
+    position: { x: 10, y: 15 },
+    cssClass: 'mini-flow primary w-56',
+    permission,
+  },
+  {
+    id: '2',
+    label: 'Predarea clădirii către clienți',
+    link: null,
+    position: { x: 120, y: 80 },
+    cssClass: 'mini-flow primary w-[265px]',
+    permission,
+  },
+  {
+    id: '3',
+    label: 'Remedierile în garanție',
+    link: null, // current page
+    position: { x: 311, y: 15 },
+    cssClass: 'mini-flow green w-52',
+    permission,
+  },
+];
+
+/* ---------- edges -------------------------------------------------- */
+const defaultEdgeStyle = { stroke: '#374151', strokeWidth: 1.3 };
+const defaultMarker = { type: 'arrow', color: '#374151', width: 13, height: 13 };
+
+const getMiniEdges = () => [
+  {
+    id: '1-3',
+    source: '1',
+    target: '3',
+    sourceHandle: 'right',
+    targetHandle: 'left',
+    type: 'straight',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
+    permission,
+  },
+  {
+    id: '2-3',
+    source: '2',
+    target: '3',
+    sourceHandle: 'right',
+    targetHandle: 'bottom',
+    type: 'step',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
+    permission,
+  },
+];
+
+module.exports = { getNodes, getEdges, getMiniEdges, getMiniNodes, permission: 'remedieri' };

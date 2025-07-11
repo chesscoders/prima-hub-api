@@ -1,68 +1,26 @@
-import { checkFlowPermission } from '@middleware';
-import { Edge, Node, Tab } from '@models';
+import { serializeDiagramData } from '@functions';
+import { Edge, Flow, Node } from '@models';
 
-const middlewares = [checkFlowPermission];
+const middlewares = [];
 async function getDiagram(req, res) {
   try {
-    /* --------------------------------------------------- FLOW */
-    // We already have the Flow from the middleware
-    const flow = req.flow;
+    const flow = await Flow.findOne({ slug: req.params.flowId }).lean();
+    if (!flow) {
+      return res.status(404).json({ message: 'Flow not found' });
+    }
 
     /* ------------------------------------------------- PAYLOAD */
     // 1. fetch nodes / edges / tabs in parallel
-    const [rawNodes, rawEdges, rawTabs] = await Promise.all([
+    const [rawNodes, rawEdges] = await Promise.all([
       Node.find({ flow: flow._id }).sort({ createdAt: 1 }).lean(),
       Edge.find({ flow: flow._id }).lean(),
-      Tab.find({ flow: flow._id }).sort({ order: 1 }).lean(),
     ]);
 
     // 2. convert DB documents to the shape that the front-end
     //    finds convenient (legacy XYFlow but w/ Mongo IDs preserved)
 
-    const nodes = rawNodes.map((n) => ({
-      _id: n._id,
-      id: n.legacyId, // legacy diagram ID
-      data: { label: n.label }, // XYFlow needs a ‘data’ obj
-      position: n.position,
-      className: n.cssClass,
-      link: n.link ?? null,
-      permission: n.permission,
-    }));
-
-    const edges = rawEdges.map((e) => ({
-      _id: e._id,
-      id: `${e.source}-${e.target}`,
-      source: e.source.toString(), // legacyId was string
-      target: e.target.toString(),
-      sourceHandle: e.sourceHandle,
-      targetHandle: e.targetHandle,
-      type: e.edgeType,
-      permission: e.permission,
-    }));
-
-    const tabs = rawTabs.map((t) => ({
-      _id: t._id,
-      slug: t.slug,
-      title: t.title,
-      html: t.html, // client will render as innerHTML
-      assets: t.assets,
-      permission: t.permission,
-      order: t.order,
-    }));
-
     /* ------------------------------------------- SEND RESPONSE */
-    return res.status(200).json({
-      flow: {
-        _id: flow._id,
-        slug: flow.slug,
-        title: flow.title,
-        isPrimary: flow.isPrimary,
-        permission: flow.permission,
-      },
-      nodes,
-      edges,
-      tabs,
-    });
+    return res.status(200).json(serializeDiagramData(flow, rawNodes, rawEdges));
   } catch (err) {
     console.error(err);
   }

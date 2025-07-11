@@ -2,7 +2,7 @@ const defaultEdgeProps = {
   markerEnd: { type: 'arrowclosed', color: '#000' },
   style: { stroke: '#000' },
 };
-
+const permission = '3';
 const addEdge = (edge) => ({
   ...defaultEdgeProps,
   type: 'step', // default – override per-edge if needed
@@ -1799,4 +1799,80 @@ const getNodes = () => [
     className: 'proiectare-flow orange w-[185px]',
   },
 ];
-module.exports = { getNodes, getEdges, permission: '3' };
+function getMiniNodes() {
+  return [
+    {
+      id: '6',
+      label: 'Concept Arhitectural',
+      link: '/flow/concept-arhitectural',
+      position: { x: 10, y: 70 },
+      cssClass: 'mini-flow primary w-52',
+      permission,
+    },
+    {
+      id: '7',
+      label: 'Proiectarea DTAC',
+      link: null,
+      position: { x: 240, y: 70 },
+      cssClass: 'mini-flow primary w-40',
+      permission,
+    },
+    {
+      id: '8',
+      label: 'Autorizarea',
+      link: null,
+      position: { x: 424, y: 70 },
+      cssClass: 'mini-flow primary w-40',
+      permission,
+    },
+    {
+      id: 'c',
+      label: 'Finanțare bancă',
+      link: null,
+      position: { x: 345, y: 10 },
+      cssClass: 'mini-flow green w-40',
+      permission,
+    },
+  ];
+}
+
+/* ---------- edges ------------------------------------------------- */
+function getMiniEdges() {
+  return [
+    {
+      id: '6-7',
+      source: '6',
+      target: '7',
+      sourceHandle: 'right',
+      targetHandle: 'left',
+      type: 'straight',
+      style: { stroke: '#000' },
+      markerEnd: { type: 'arrowclosed', color: '#000' },
+      permission,
+    },
+    {
+      id: '7-8',
+      source: '7',
+      target: '8',
+      sourceHandle: 'right',
+      targetHandle: 'left',
+      type: 'straight',
+      style: { stroke: '#000' },
+      markerEnd: { type: 'arrowclosed', color: '#000' },
+      permission,
+    },
+    {
+      id: '7-c',
+      source: '7',
+      target: 'c',
+      sourceHandle: 'top',
+      targetHandle: 'left',
+      type: 'step',
+      style: { stroke: '#000' },
+      markerEnd: { type: 'arrowclosed', color: '#000' },
+      permission,
+    },
+  ];
+}
+
+module.exports = { getNodes, getEdges, getMiniEdges, getMiniNodes, permission: '3' };
