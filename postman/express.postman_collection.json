@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "862fbf01-148f-4ec8-93b1-6a5f51641fd0",
-		"name": "express",
+		"_postman_id": "45bfee2c-a269-4669-a31e-c4e758b80d80",
+		"name": "prima-hub",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "18120273"
+		"_exporter_id": "30085452"
 	},
 	"item": [
 		{
@@ -339,6 +339,117 @@
 			]
 		},
 		{
+			"name": "Flow",
+			"item": [
+				{
+					"name": "List flows",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/flows/686be931216a8de48aec6c9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"flows",
+								"686be931216a8de48aec6c9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Diagram",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/flows/diagram/686be931216a8de48aec6c9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"flows",
+								"diagram",
+								"686be931216a8de48aec6c9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Tabs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/flows/tabs/686be931216a8de48aec6c9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"flows",
+								"tabs",
+								"686be931216a8de48aec6c9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tabs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/flows/tabs/686be931216a8de48aec6c9b/686be932216a8de48aec6cb4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"flows",
+								"tabs",
+								"686be931216a8de48aec6c9b",
+								"686be932216a8de48aec6cb4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Login",
 			"event": [
 				{
@@ -358,7 +469,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"michael@email.com\",\n    \"password\": \"supersecretpassword\"\n}",
+					"raw": "{\n    \"email\": \"maria.constantin@primadevelopment.ro\",\n    \"password\": \"supersecretpassword\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
