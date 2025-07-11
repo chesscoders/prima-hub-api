@@ -9,7 +9,7 @@ const AssetSchema = new Schema(
     /* original file-name shown to the user */
     label: { type: String },
     type: { type: String },
-    name: { type: String },
+    filename: { type: String },
     /* physical object key / URL in your storage bucket */
     url: { type: String },
 
