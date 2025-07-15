@@ -15,7 +15,6 @@ const defaultMarker = { type: 'arrow', color: '#374151', width: 13, height: 13 }
  * node helper                                                        *
  * ------------------------------------------------------------------ */
 function serialiseNode(doc, flowSlug) {
-  const isPrimary = (doc.cssClass || '').includes('primary'); // legacy rule
   return {
     id: doc.legacyId,
     type: 'flow', // handled by <FlowNode>
@@ -24,7 +23,7 @@ function serialiseNode(doc, flowSlug) {
 
     data: {
       label: stripTags(doc.label), // keep text only
-      href: isPrimary ? `/flow/${flowSlug}` : null,
+      href: `/flow/${flowSlug}`,
       cssClass: `flow-node ${doc.cssClass || ''}`,
     },
   };

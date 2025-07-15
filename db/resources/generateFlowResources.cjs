@@ -32,7 +32,8 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
   for (const slug of flowDirs) {
     /* ---------- FLOW ------------------------------------------------ */
     const modPath = path.join(ROOT, slug, 'flow-data.js');
-    const { getNodes, getEdges, permission: flowPerm, title, isPrimary } = require(modPath);
+    const isPrimary = slug == 'prima-flow' ? true : false;
+    const { getNodes, getEdges, permission: flowPerm, title } = require(modPath);
     console.log(flowPerm);
     const flowDoc = await Flow.create({
       slug,
