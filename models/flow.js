@@ -63,6 +63,9 @@ const schema = new Schema(
       nodes: [MiniNode],
       edges: [MiniEdge],
     },
+    overlay: {
+      type: String,
+    },
   },
   { timestamps: true, autoCreate: false }
 );

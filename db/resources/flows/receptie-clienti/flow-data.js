@@ -71,36 +71,42 @@ const getNodes = () => [
     position: getNodePosition('1'),
     data: { label: 'pregătirea materialelor predate' },
     className: 'achizitie-flow w-52 h-[50px]',
+    showIndex: true,
   },
   {
     id: '2',
     position: getNodePosition('2'),
     data: { label: 'Întâlnirea Kick-off și Ședințele Recurente' },
     className: 'achizitie-flow w-52 h-[50px]',
+    showIndex: true,
   },
   {
     id: '3',
     position: getNodePosition('3'),
     data: { label: 'programarea recepției' },
     className: 'achizitie-flow',
+    showIndex: true,
   },
   {
     id: '4',
     position: getNodePosition('4'),
     data: { label: 'recepția tehnică' },
     className: 'achizitie-flow',
+    showIndex: true,
   },
   {
     id: '5',
     position: getNodePosition('5'),
     data: { label: 'remedierea viciilor constatate' },
     className: 'achizitie-flow w-48 h-[50px]',
+    showIndex: true,
   },
   {
     id: '6',
     position: getNodePosition('6'),
     data: { label: 'situații excepționale - refuzul recepției' },
     className: 'achizitie-flow w-52 h-[50px]',
+    showIndex: true,
   },
 ];
 const permission = '8'; // same flag you check on the page

@@ -1882,4 +1882,11 @@ function getMiniEdges() {
   ];
 }
 
-module.exports = { getNodes, getEdges, getMiniEdges, getMiniNodes, permission: '3' };
+module.exports = {
+  getNodes,
+  getEdges,
+  getMiniEdges,
+  getMiniNodes,
+  permission: '3',
+  overlay: 'horizontal',
+};

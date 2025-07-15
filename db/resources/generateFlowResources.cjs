@@ -40,6 +40,7 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
       getMiniNodes,
       permission: flowPerm,
       title,
+      overlay,
     } = require(modPath);
 
     /* fallback to empty arrays when helpers are missing */
@@ -51,6 +52,7 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
       title: title ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
       isPrimary,
       permission: flowPerm ?? null,
+      overlay,
 
       /* always store the field, even if empty */
       miniMap: { nodes: miniNodes, edges: miniEdges },
@@ -58,7 +60,7 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
     /* ---------- NODES ---------------------------------------------- */
     const legacyNodes = await getNodes();
     const idMap = new Map(); // legacyId ➜ Mongo _id
-
+    const showIndex = isPrimary ? false : true;
     const nodeDocs = await Node.insertMany(
       legacyNodes.map((n) => ({
         flow: flowDoc._id,
@@ -68,7 +70,7 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
         cssClass: n.cssClass ?? n.className ?? '',
         link: n.link ?? n.url ?? null,
         permission: n.permission ?? flowPerm ?? null,
-        showIndex: n?.showIndex ?? false,
+        showIndex,
       }))
     );
     nodeDocs.forEach((d) => idMap.set(d.legacyId, d._id));

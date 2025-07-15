@@ -486,4 +486,5 @@ module.exports = {
   // mini-map
   getMiniNodes,
   getMiniEdges,
+  overlay: 'vertical',
 };
