@@ -1,16 +1,13 @@
 import { Flow } from '@models';
-import mongoose from 'mongoose';
 
 export default async function (req, res, next) {
   try {
     /* ---------- 1. basic param sanity check ---------------------- */
     const { flowId } = req.params;
-    if (!mongoose.Types.ObjectId.isValid(flowId)) {
-      return res.status(400).json({ message: 'Invalid flow id' });
-    }
 
     /* ---------- 2. fetch flow once -------------------------------- */
-    const flow = await Flow.findById(flowId).lean();
+
+    const flow = await Flow.findOne({ slug: flowId }).lean();
     if (!flow) {
       return res.status(404).json({ message: 'Flow not found' });
     }

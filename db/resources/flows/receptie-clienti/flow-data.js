@@ -103,4 +103,88 @@ const getNodes = () => [
     className: 'achizitie-flow w-52 h-[50px]',
   },
 ];
-module.exports = { getNodes, getEdges, permission: '8' };
+const permission = '8'; // same flag you check on the page
+
+/* ------------ nodes ------------------------------------------------ */
+const getMiniNodes = () => [
+  {
+    id: '1',
+    label: 'Recepția cu autoritățile',
+    link: '/flow/intabulare', // deep-link to the main flow
+    position: { x: 10, y: 15 },
+    cssClass: 'mini-flow primary w-52',
+    permission,
+    showIndex: true,
+  },
+  {
+    id: '2',
+    label: 'Recepția cu clienții',
+    link: null, // current page → no link
+    position: { x: 250, y: 15 },
+    cssClass: 'mini-flow primary w-44',
+    permission,
+    showIndex: true,
+  },
+  {
+    id: '3',
+    label: 'Remedieri în garanție',
+    link: '/flow/remedieri-garantie',
+    position: { x: 458, y: 15 },
+    cssClass: 'mini-flow green w-52',
+    permission,
+    showIndex: true,
+  },
+  {
+    id: '4',
+    label: 'Semnarea contractelor CVC',
+    link: null,
+    position: { x: 210, y: 80 },
+    cssClass: 'mini-flow primary w-64',
+    permission,
+    showIndex: true,
+  },
+];
+
+/* ------------ edges ------------------------------------------------ */
+const defaultEdgeStyle = { stroke: '#374151', strokeWidth: 1.3 };
+const defaultMarker = { type: 'arrow', color: '#374151', width: 13, height: 13 };
+
+const getMiniEdges = () => [
+  {
+    id: '1-2',
+    source: '1',
+    target: '2',
+    sourceHandle: 'right',
+    targetHandle: 'left',
+    type: 'straight',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
+    permission,
+    showIndex: true,
+  },
+  {
+    id: '2-3',
+    source: '2',
+    target: '3',
+    sourceHandle: 'right',
+    targetHandle: 'left',
+    type: 'straight',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
+    permission,
+    showIndex: true,
+  },
+  {
+    id: '2-4',
+    source: '2',
+    target: '4',
+    sourceHandle: 'bottom',
+    targetHandle: 'top',
+    type: 'straight',
+    style: defaultEdgeStyle,
+    markerEnd: defaultMarker,
+    permission,
+    showIndex: true,
+  },
+];
+module.exports = { getNodes, getEdges, getMiniEdges, getMiniNodes, permission: '8' };
