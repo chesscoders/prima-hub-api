@@ -119,7 +119,7 @@ const getNodes = () => [
     label: 'Setarea procesului de vânzări',
     link: null,
     position: { x: 580, y: 215 },
-    cssClass: `${violetCss} w-44`,
+    cssClass: `${violetCss} w-44 text-xs`,
   },
   {
     id: 'vanzari',
@@ -287,7 +287,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'left',
     type: 'step',
-    sourceHandleCss: 'left-11',              // ⬅ offset from JSX
+    sourceHandleCss: 'left-11', // ⬅ offset from JSX
   },
   {
     id: 'urbanisticaa-concept',
@@ -296,7 +296,7 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'bottom',
     type: 'step',
-    targetHandleCss: 'left-[73px]',          // ⬅ offset from JSX
+    targetHandleCss: 'left-[73px]', // ⬅ offset from JSX
   },
   {
     id: '3-finantare',
@@ -329,7 +329,7 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'custom-bottom',
     type: 'step',
-    targetHandleCss: 'left-3',               // ⬅ offset from JSX
+    targetHandleCss: 'left-3', // ⬅ offset from JSX
   },
   {
     id: 'autorizarea-setup',
@@ -394,7 +394,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'left',
     type: 'step',
-    sourceHandleCss: 'left-8',               // ⬅ offset from JSX
+    sourceHandleCss: 'left-8', // ⬅ offset from JSX
   },
   {
     id: 'intabulare-cvc',
@@ -403,7 +403,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'custom-left',
     type: 'step',
-    targetHandleCss: 'top-2',                // ⬅ offset from JSX
+    targetHandleCss: 'top-2', // ⬅ offset from JSX
   },
   {
     id: 'vanzari-comunicare',
@@ -428,7 +428,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'top',
     type: 'step',
-    sourceHandleCss: 'left-20',              // ⬅ offset from JSX
+    sourceHandleCss: 'left-20', // ⬅ offset from JSX
   },
   {
     id: 'cvc-asociatie',
@@ -453,7 +453,7 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'bottom',
     type: 'step',
-    targetHandleCss: 'left-24',              // from legacy JSX
+    targetHandleCss: 'left-24', // from legacy JSX
   },
 ];
 
