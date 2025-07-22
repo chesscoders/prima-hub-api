@@ -10,3 +10,4 @@ export { default as getS3FileName } from './get-s3-file-name';
 export { default as randomHash } from './random-hash';
 export { default as removeDiacritics } from './remove-diacritics';
 export { default as removeRefreshTokenCookie } from './remove-refresh-token-cookie';
+export { default as serializeDiagramData } from './serialize-diagram-data';
