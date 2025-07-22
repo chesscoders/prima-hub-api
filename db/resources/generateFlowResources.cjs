@@ -83,6 +83,8 @@ const stripTags = (s = '') => s.replace(STRIP_TAGS, ' ').replace(/\s+/g, ' ').tr
         source: idMap.get(e.source),
         target: idMap.get(e.target),
         sourceHandle: e.sourceHandle ?? null,
+        sourceHandleCss: e.sourceHandleCss,
+        targetHandleCss: e.targetHandleCss,
         targetHandle: e.targetHandle ?? null,
         edgeType: e.type ?? 'straight',
         permission: e.permission ?? flowPerm ?? null,

@@ -211,7 +211,7 @@ const getNodes = () => [
 
 /* ---- EDGES ---------------------------------------------------------- */
 const getEdges = () => [
-  /* main line (7 segments) */
+  /* ── Main line ──────────────────────────────────────────────────── */
   {
     id: 'achizitie-concept',
     source: 'achizitie',
@@ -269,7 +269,7 @@ const getEdges = () => [
     type: 'straight',
   },
 
-  /* end-cap */
+  /* ── End‑cap ────────────────────────────────────────────────────── */
   {
     id: '8-remedieri',
     source: '8',
@@ -279,7 +279,7 @@ const getEdges = () => [
     type: 'step',
   },
 
-  /* secondary links (23) */
+  /* ── Secondary links ────────────────────────────────────────────── */
   {
     id: 'achizitie-urbanisticaa',
     source: 'achizitie',
@@ -287,6 +287,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'left',
     type: 'step',
+    sourceHandleCss: 'left-11',              // ⬅ offset from JSX
   },
   {
     id: 'urbanisticaa-concept',
@@ -295,6 +296,7 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'bottom',
     type: 'step',
+    targetHandleCss: 'left-[73px]',          // ⬅ offset from JSX
   },
   {
     id: '3-finantare',
@@ -312,7 +314,6 @@ const getEdges = () => [
     targetHandle: 'left',
     type: 'step',
   },
-
   {
     id: 'autorizarea-utilitati',
     source: 'autorizarea',
@@ -328,9 +329,8 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'custom-bottom',
     type: 'step',
-    targetHandleCss: 'bottom-24',
+    targetHandleCss: 'left-3',               // ⬅ offset from JSX
   },
-
   {
     id: 'autorizarea-setup',
     source: 'autorizarea',
@@ -355,7 +355,6 @@ const getEdges = () => [
     targetHandle: 'left',
     type: 'straight',
   },
-
   {
     id: 'autorizarea-setupmrk',
     source: 'autorizarea',
@@ -380,7 +379,6 @@ const getEdges = () => [
     targetHandle: 'left',
     type: 'step',
   },
-
   {
     id: 'receptie-c',
     source: 'receptie',
@@ -396,6 +394,7 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'left',
     type: 'step',
+    sourceHandleCss: 'left-8',               // ⬅ offset from JSX
   },
   {
     id: 'intabulare-cvc',
@@ -404,8 +403,8 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'custom-left',
     type: 'step',
+    targetHandleCss: 'top-2',                // ⬅ offset from JSX
   },
-
   {
     id: 'vanzari-comunicare',
     source: 'vanzari',
@@ -429,8 +428,8 @@ const getEdges = () => [
     sourceHandle: 'bottom',
     targetHandle: 'top',
     type: 'step',
+    sourceHandleCss: 'left-20',              // ⬅ offset from JSX
   },
-
   {
     id: 'cvc-asociatie',
     source: 'cvc',
@@ -454,8 +453,8 @@ const getEdges = () => [
     sourceHandle: 'right',
     targetHandle: 'bottom',
     type: 'step',
-    targetHandleCss: 'left-24',
-  }, // small offset like in legacy JSX
+    targetHandleCss: 'left-24',              // from legacy JSX
+  },
 ];
 
 /* -------------------------------------------------------------------- */
