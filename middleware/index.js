@@ -1,3 +1,4 @@
+export { default as checkFlowPermission } from './check-flow-permission';
 export { default as diacriticInsensitive } from './diacritic-insensitive';
 export { default as notFound } from './not-found';
 export { default as userExists } from './user-exists';

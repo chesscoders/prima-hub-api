@@ -6,3 +6,4 @@ export { default as Order } from './order';
 export { default as ProjectManager } from './project-manager';
 export { default as Reset } from './reset';
 export { default as SiteManager } from './site-manager';
+export { default as Tabs } from './tabs';
