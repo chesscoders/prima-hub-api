@@ -284,4 +284,4 @@ const tabs = [
     ],
   },
 ];
-module.exports = { tabs, flow: 'bransamente-utilitati' };
+module.exports = { tabs, flow: "utilitati" };

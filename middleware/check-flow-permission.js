@@ -2,7 +2,7 @@ const permissionsMap = {
   'achizitie-teren': 'achizitie',
   'concept-arhitectural': 'concept',
   'remedieri-garantie': 'remedieri',
-  'bransamente-utilitati': 'bransamente-utilitati',
+  'utilitati': 'utilitati',
   intabulare: 'intabulare',
   'proiectare-dtac': '3',
   'proiectare-pt-dde': '3',
