@@ -36,7 +36,7 @@ const tabs = [
     assets: [
       {
         label: 'Exemplu imputernicire Miral',
-        filename: '1. Exemplu imputernicire Miral.docx',
+        filename: '1. Exemplu imputernicire Miral.DOCX',
         fileType: 'doc',
       },
       {
@@ -50,8 +50,8 @@ const tabs = [
         fileType: 'pdf',
       },
       {
-        label: 'Exemplu Ridicare topo in coordinate STEREO70',
-        filename: '4. Exemplu Ridicare topo in coordinate STEREO70.pdf',
+        label: 'Exemplu Ridicare topo in coordonate STEREO70',
+        filename: '4. Exemplu Ridicare topo in coordonate STEREO70.pdf',
         fileType: 'pdf',
       },
       {
@@ -231,7 +231,18 @@ const tabs = [
     <p>Documente anexe:</p>
 </div>
   `,
-    assets: [],
+    assets: [
+      {
+        label: 'Exemplu ordin incepere lucrari',
+        filename: '12. Exemplu ordin incepere lucrari.pdf',
+        fileType: 'pdf',
+      },
+      {
+        label: 'Exemplu PV receptie',
+        filename: '13. Exemplu PV receptie.pdf',
+        fileType: 'pdf',
+      },
+    ],
   },
   /* ----------------------------------------------------------- 6 */
   {
@@ -278,7 +289,7 @@ const tabs = [
     assets: [
       {
         label: 'Exemplu contract utilitati',
-        filename: '11. Exemplu contract utilitati.pdf',
+        filename: '14. Exemplu contract utilitati.pdf',
         fileType: 'pdf',
       },
     ],
