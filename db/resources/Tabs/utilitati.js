@@ -4,7 +4,7 @@ const tabs = [
     html: `
   <div className="space-y-4">
     <h3 className="text-xl font-bold">1. Obținerea avizului de principiu</h3>
-    <h4 className="text-lg font-bold">Scopul avizului</h4>
+    <p className="text-lg font-bold">Scopul avizului</p>
     <p>Avizul de principiu emis de ApaNova este documentul care ne spune unde ne putem bransa la rețeaua publică de alimentare cu apă și canalizare. Practic, ne oferă punctele de racord posibile, pe baza infrastructurii existente în zonă.</p>
   
     <p className="font-bold">Input necesar pentru depunere:</p>
@@ -30,7 +30,7 @@ const tabs = [
       <li>Dacă traseul rețelei trece pe un alt teren, se solicită și declarații notariale de acces din partea vecinilor (ex. Montrom, Tamilia), în care aceștia își dau acordul pentru trecerea conductei.</li>
     </ul>
 
-    <p>Documente anexe:</p>
+    
   </div>
   `,
     assets: [
@@ -68,7 +68,7 @@ const tabs = [
   <div className="space-y-4">
     <h3 className="text-xl font-bold">2. Obținerea avizului tehnic (definitiv)</h3>
 
-    <h4 className="text-lg font-bold">Scopul avizului</h4>
+    <p className="text-lg font-bold">Scopul avizului</p>
     <p>Avizul tehnic, denumit uneori și „aviz definitiv”, este documentul emis de Apa Nova care confirmă soluția finală de branșament. Cu alte cuvinte, validează gândirea tehnică propusă de proiectanți și stabilește în mod oficial unde și cum ne putem bransa.</p>
   
     <p className="font-bold">Input necesar pentru obținerea avizului:</p>
@@ -94,7 +94,7 @@ const tabs = [
       <li>Acest proiect este pus la dispoziția colaboratorilor noștri, care urmează să execute efectiv lucrările în teren</li>
     </ul>
   
-    <p>Documente anexe:</p>
+    
     </div>
   `,
     assets: [
@@ -129,7 +129,7 @@ const tabs = [
     <h3 className="text-xl font-bold">3. Obținerea acordului de execuție ADP</h3>
     <p>(Administrația Străzilor - Direcția Drumuri - Primăria Municipiului București)</p>
 
-    <h4 className="text-lg font-bold">Scopul acordului</h4>
+    <p className="text-lg font-bold">Scopul acordului</p>
     <p>Pentru a putea executa fizic lucrările de branșament în domeniul public (carosabil, trotuar etc.), este necesar acordul administratorului de drum – în București, acesta este emis de către Direcția Drumuri din cadrul PMB (ADP).</p>
   
     <p className="font-bold">Cum se obține:</p>
@@ -143,7 +143,7 @@ const tabs = [
     <p className="font-bold">Observație:</p>
     <p>Fără acest acord, nu se pot deschide șantiere în domeniul public, indiferent dacă avizul tehnic Apa Nova a fost deja emis.</p>
 
-    <p>Documente anexe:</p>
+    
 </div>
   `,
     assets: [
@@ -161,7 +161,7 @@ const tabs = [
   <div className="space-y-4">
     <h3 className="text-xl font-bold">4. Semnarea contractului de execuție (tripartit)</h3>
     
-    <h4 className="text-lg font-bold">Scopul contractului</h4>
+    <p className="text-lg font-bold">Scopul contractului</p>
     <p>Pentru a putea începe lucrările de branșament, este necesară încheierea unui contract tripartit între:</p>
     <ul className="list-disc list-inside space-y-1 pl-4">
       <li>Beneficiarul lucrării (dezvoltatorul)</li>
@@ -184,7 +184,7 @@ const tabs = [
       <li>Contractul este verificat și validat de departamentul juridic al Apa Nova înainte de semnare.</li>
     </ul>
 
-    <p>Documente anexe:</p>
+    
     </div>
   `,
     assets: [
@@ -202,7 +202,7 @@ const tabs = [
   <div className="space-y-4">
     <h3 className="text-xl font-bold">5. Execuția lucrărilor</h3>
     
-    <h4 className="text-lg font-bold">Scopul etapei</h4>
+    <p className="text-lg font-bold">Scopul etapei</p>
     <p>Aceasta este etapa propriu-zisă de realizare a branșamentului în teren, conform proiectului tehnic aprobat de Apa Nova. Lucrările sunt executate de către firma autorizată, sub supravegherea Apa Nova și în baza ordinului de începere.</p>
   
     <p className="font-bold">Input necesar & pași de parcurs:</p>
@@ -228,7 +228,7 @@ const tabs = [
       La finalul lucrărilor, se organizează o recepție oficială împreună cu reprezentantul Apa Nova. Se semnează un proces-verbal de recepție, care confirmă că lucrarea s-a executat corect și poate fi pusă în funcțiune</li>
     </ol>
   
-    <p>Documente anexe:</p>
+    
 </div>
   `,
     assets: [
@@ -251,7 +251,7 @@ const tabs = [
   <div className="space-y-4">
     <h3 className="text-xl font-bold">6. Încheierea contractului de furnizare servicii</h3>
 
-    <h4 className="text-lg font-bold">Scopul etapei</h4>
+    <p className="text-lg font-bold">Scopul etapei</p>
     <p>După finalizarea lucrărilor și recepția lor de către Apa Nova, se poate încheia contractul de furnizare servicii apă și canalizare, care permite efectiv utilizarea rețelei nou executate. Acesta este documentul prin care branșamentul intră în exploatare.</p>
   
   <p className="font-bold">Input necesar & pași de parcurs:</p>
@@ -283,7 +283,7 @@ const tabs = [
       <li>Cat timp construcția este în curs, se poate încheia un contract temporar de șantier, cu transformarea ulterioară în contract definitiv după recepția cu autoritățile.</li>
     </ul>
 
-    <p>Documente anexe:</p>
+    
     </div>
   `,
     assets: [
@@ -295,4 +295,4 @@ const tabs = [
     ],
   },
 ];
-module.exports = { tabs, flow: "utilitati" };
+module.exports = { tabs, flow: 'utilitati' };
