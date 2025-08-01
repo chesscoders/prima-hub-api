@@ -35,27 +35,27 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu imputernicire Miral',
+        label: '1. Exemplu imputernicire Miral',
         filename: '1. Exemplu imputernicire Miral.DOCX',
         fileType: 'doc',
       },
       {
-        label: 'Exemplu breviar calcul necesar apa',
+        label: '2. Exemplu breviar calcul necesar apa',
         filename: '2. Exemplu breviar calcul necesar apa.docx',
         fileType: 'doc',
       },
       {
-        label: 'Exemplu Aviz de Amplasament Retele ApaNova',
+        label: '3. Exemplu Aviz de Amplasament Retele ApaNova',
         filename: '3. Exemplu Aviz de Amplasament Retele ApaNova.pdf',
         fileType: 'pdf',
       },
       {
-        label: 'Exemplu Ridicare topo in coordonate STEREO70',
+        label: '4. Exemplu Ridicare topo in coordonate STEREO70',
         filename: '4. Exemplu Ridicare topo in coordonate STEREO70.pdf',
         fileType: 'pdf',
       },
       {
-        label: 'Exemplu Aviz de Principiu-output',
+        label: '5. Exemplu Aviz de Principiu-output',
         filename: '5. Exemplu Aviz de Principiu-output.pdf',
         fileType: 'pdf',
       },
@@ -99,22 +99,22 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu calcule parte scrisa',
+        label: '6. Exemplu calcule parte scrisa',
         filename: '6. Exemplu calcule parte scrisa.docx',
         fileType: 'doc',
       },
       {
-        label: 'Exemplu Aviz Tehnic-output',
+        label: '7. Exemplu Aviz Tehnic-output',
         filename: '7. Exemplu Aviz Tehnic-output.pdf',
         fileType: 'pdf',
       },
       {
-        label: 'Exemplu Proiect APA-output',
+        label: '8. Exemplu Proiect APA-output',
         filename: '8. Exemplu Proiect APA-output.pdf',
         fileType: 'pdf',
       },
       {
-        label: 'Logigrama proces bransare ApaNova',
+        label: '9. Logigrama proces bransare ApaNova',
         filename: '9. Logigrama proces bransare ApaNova.pdf',
         fileType: 'pdf',
       },
@@ -148,7 +148,7 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu acord de executie ADP',
+        label: '10.Exemplu acord de executie ADP',
         filename: '10. Exemplu acord de executie ADP.pdf',
         fileType: 'pdf',
       },
@@ -189,7 +189,7 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu contract tripartit',
+        label: '11. Exemplu contract tripartit',
         filename: '11. Exemplu contract tripartit.pdf',
         fileType: 'pdf',
       },
@@ -233,12 +233,12 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu ordin incepere lucrari',
+        label: '12. Exemplu ordin incepere lucrari',
         filename: '12. Exemplu ordin incepere lucrari.pdf',
         fileType: 'pdf',
       },
       {
-        label: 'Exemplu PV receptie',
+        label: '13. Exemplu PV receptie',
         filename: '13. Exemplu PV receptie.pdf',
         fileType: 'pdf',
       },
@@ -288,7 +288,7 @@ const tabs = [
   `,
     assets: [
       {
-        label: 'Exemplu contract utilitati',
+        label: '14. Exemplu contract utilitati',
         filename: '14. Exemplu contract utilitati.pdf',
         fileType: 'pdf',
       },
